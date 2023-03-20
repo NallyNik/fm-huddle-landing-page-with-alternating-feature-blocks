@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-align: center;
     text-decoration: none;
 }
@@ -20,8 +21,8 @@ h1 {
     font-size: 1.5rem;
 }
 p {
-    margin-top: 1rem;
     font-family: 'Open Sans', sans-serif;
+    font-size: 0.8rem;
 }
 .flex-column {
     display: flex;
@@ -51,7 +52,7 @@ button {
 }
 .button-pink {
     margin: 2rem auto;
-    padding: 0.8rem 4rem;
+    padding: 1rem 4rem;
 
     background-color: hsl(322, 100%, 66%);
     color: white;
@@ -91,21 +92,22 @@ section {
     box-shadow: 0 0 20px -10px hsl(208, 11%, 55%);
 }
 section p {
+    margin-top: 1rem;
+
     color: hsl(208, 11%, 55%);
-    font-size: 0.8rem;
 }
 .float-container {
     height: 10rem;
-    width: 20rem;
+    width: 100vw;
     position: relative;
 }
 .float {
-    width: 18rem;
-    height: 6rem;
-    padding: 3rem 1rem;
+    width: 90%;
+    height: fit-content;
+    padding-top: 2rem;
+    gap: 0;
     position: absolute;
-    left: 0;
-    bottom: -8rem;
+    bottom: -7rem;
 
     background-color: white;
     border-radius: 1rem;
@@ -115,40 +117,168 @@ section p {
 
 /* footer */
 footer {
-    padding: 10rem 1rem;
+    width: 100vw;
+    padding: 10rem 0;
 
     background-color: hsl(192, 100%, 9%);
     color: hsl(193, 100%, 96%);
 }
-footer img {
-    width: 2rem;
+footer p {
+    font-size: 1.1rem;
+    text-align: left;
 }
 footer p:nth-last-child(2) {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 a {
     color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+.footer-main {
+    align-items: flex-start;
 }
 .information {
     align-items: flex-start;
 }
 .info {
+    margin: 0;
     width: 18rem;
     display: flex;
     gap: 1rem;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.info img {
+:is(.info, .social-media) img {
+    width: 2rem;
     object-fit: scale-down;
 }
 .anchors {
     margin: 3rem 0;
     align-items: flex-start;
 }
+.social-media {
+    margin: auto;
+}
 .attribution {
     white-space: pre;
 }
 .attribution a:hover {
     color: hsl(322, 100%, 66%);
+}
+
+@media (min-width: 1000px) {
+    h1, h2, p {
+        text-align: left;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .flex-row {
+        flex-direction: row;
+    }
+    .flex-row-reverse {
+        flex-direction: row-reverse;
+    }
+    /* header */
+    header {
+        padding: 3rem;
+    }
+    .logo {
+        margin-bottom: 3rem;
+    }
+    .logo img {
+        width: 10rem;
+    }
+    .button-free {
+        padding: 0.6rem 3rem;
+
+        font-size: medium;
+    }
+    .start {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .start img {
+        width: 50%;
+    }
+    /* main */
+    main {
+        width: 85%;
+        margin: 5rem auto;
+    }
+    main img {
+        width: 40%;
+        margin: 2rem auto;
+    }
+    section {
+        padding-left: 7rem;
+    }
+    section div:first-of-type {
+        margin-right: 5rem;
+    }
+    main .flex-row div:first-of-type{
+        margin-right: 0;
+        margin-left: 5rem;
+    }
+    .float {
+        width: 50%;
+        padding: 4rem 0 2rem;
+        bottom: -14rem;
+    }
+    .float button {
+        padding: 1.5rem 6rem;
+
+        font-size: 1.2rem;
+    }
+    /* footer */
+    footer {
+        padding: 10rem 2rem 0.5rem 8rem;
+    }
+    footer img {
+        align-self: start;
+        filter: drop-shadow(0 0 1px white);
+    }
+    .footer-main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: start;
+    }
+    .info {
+        width: 100%;
+    }
+    .anchors {
+        margin: 0;
+        display: block;
+        column-count: 2;
+        justify-self: center;
+    }
+    .anchors p {
+        margin: 0 2rem 1rem;
+        margin-bottom: 1rem;
+    }
+    .social-media {
+        margin: 0;
+    }
+    .social-media img {
+        width: 3rem;
+    }
+    .social-media img:hover {
+        filter: drop-shadow(0 0 1px hsl(322, 100%, 66%));
+        cursor: pointer;
+    }
+    footer p:nth-last-child(2) {
+        align-self: self-end;
+    }
+    .attribution {
+        white-space: normal;
+    }
 }
