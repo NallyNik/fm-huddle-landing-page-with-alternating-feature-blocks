@@ -244,7 +244,7 @@ a:hover {
     }
     footer img {
         align-self: start;
-        filter: drop-shadow(0 0 1px white);
+        filter: contrast(0) brightness(2);
     }
     .footer-main {
         width: 100%;
@@ -272,7 +272,7 @@ a:hover {
         width: 3rem;
     }
     .social-media img:hover {
-        filter: drop-shadow(0 0 1px hsl(322, 100%, 66%));
+        filter: invert(30%);
         cursor: pointer;
     }
     footer p:nth-last-child(2) {

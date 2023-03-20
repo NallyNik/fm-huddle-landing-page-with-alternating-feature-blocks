@@ -22,7 +22,8 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
-- Use `boxsizing: border-box;`
+- Use `box-sizing: border-box;` to help with box sizes.
+- Use `filter: contrast(0) brightness(2);` to change the logo color to white!
 
 ## Author
 
