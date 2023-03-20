@@ -24,6 +24,7 @@ Users should be able to:
 ### What I learned
 - Use `box-sizing: border-box;` to help with box sizes.
 - Use `filter: contrast(0) brightness(2);` to change the logo color to white!
+- Add icons properly to change the color like text! I'm amazed by this!
 
 ## Author
 

@@ -159,7 +159,31 @@ a:hover {
     align-items: flex-start;
 }
 .social-media {
-    margin: auto;
+    width: 100%;
+}
+.social-media ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-media li {
+    padding: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+.social-media li:hover {
+    color: hsl(322, 100%, 66%);
+    border-color: hsl(322, 100%, 66%);
 }
 .attribution {
     white-space: pre;
@@ -265,15 +289,10 @@ a:hover {
         margin: 0 2rem 1rem;
         margin-bottom: 1rem;
     }
-    .social-media {
-        margin: 0;
-    }
-    .social-media img {
-        width: 3rem;
-    }
-    .social-media img:hover {
-        filter: invert(30%);
-        cursor: pointer;
+    .social-media li {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
     }
     footer p:nth-last-child(2) {
         align-self: self-end;
